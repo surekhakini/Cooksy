@@ -306,6 +306,22 @@ function MyRecipes() {
                 </p>
               )}
 
+              {/* View Recipe Button */}
+
+              <button
+                onClick={() =>
+                  navigate(
+                    `/recipe/${recipe._id}`
+                  )
+                }
+                style={{
+                  marginTop: "10px",
+                  marginRight: "10px",
+                }}
+              >
+                View
+              </button>
+
               {/* Edit Button */}
 
               <button
@@ -315,7 +331,6 @@ function MyRecipes() {
                   )
                 }
                 style={{
-                  marginTop: "10px",
                   marginRight: "10px",
                 }}
               >
