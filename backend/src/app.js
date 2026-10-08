@@ -1,6 +1,9 @@
 import express from "express";
 import cors from "cors";
 import ingredientRoutes from "./routes/ingredientRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import recipeRoutes from "./routes/recipeRoutes.js";
 
 const app = express();
 
@@ -14,6 +17,12 @@ app.get("/api/health", (req, res) => {
   });
 });
 
+// Existing ingredient routes
 app.use("/api/ingredients", ingredientRoutes);
+
+// Authentication routes
+app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/recipes", recipeRoutes);
 
 export default app;
